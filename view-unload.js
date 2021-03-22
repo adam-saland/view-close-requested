@@ -4,4 +4,4 @@ if(window) {
         fin.InterApplicationBus.publish('beforeunload', 'beforeunload is happening')
         e.returnValue = console.log(e);
     }
-}
+}       
