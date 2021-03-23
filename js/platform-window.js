@@ -14,12 +14,12 @@ window.addEventListener('DOMContentLoaded', () => {
         e.preventDefault()
         if (fin.me.isWindow) {
             const { target: { parentElement } } = e;
-            console.log(parentElement) 
-            const views = await fin.me.getCurrentViews();
+            const views = new Set(await fin.me.getCurrentViews());
+            
 
             console.dir({ VIEWS: views }, { depth: null, colors: true })
             console.dir({ TARGET: e.target }, { depth: null, colors: true })
-            const clickedView = views.find((v) => (parentElement.id.includes && e.target.className === "lm_close_tab"))
+            const clickedView = [...views].find((v) => (parentElement.id.includes && e.target.className === "lm_close_tab"))
             console.dir({ CLICKED_VIEW: clickedView }, { depth: null, colors: true })
         }
 
