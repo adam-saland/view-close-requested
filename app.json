@@ -37,13 +37,15 @@
             "minHeight": 445,
             "minWidth": 354,
             "experimental": {
-                "analytics": true
+                "analytics": true,
+                "showBackgroundImages": false
             }
         },
         "defaultViewOptions": {
             "experimental": {
                 "childWindows": true,
-                "analytics": true
+                "analytics": true,
+                "showBackgroundImages": false
             }
         },
         "commands": [

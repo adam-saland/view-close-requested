@@ -30,7 +30,7 @@
     --top-bar-close-button-color: var(--of-default-red);
     --top-bar-close-button-active-color: var(--of-default-red-negative);
     --drop-target-border-color: var(--of-highlight);
-    --drop-target-background-color: var(--of-highlight-opacity);
+    --drop-target-background-color: var(--of-default-black);
     
     /* Colors that default to dependent on Main Colors, but should be uniquely editable  */
     --frame-background-color: var(--secondary-background-color);
