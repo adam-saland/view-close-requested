@@ -1,7 +1,7 @@
-if(window) {
-    window.onbeforeunload = (e) => {
-        e.preventDefault();
-        fin.InterApplicationBus.publish('beforeunload', 'beforeunload is happening')
-        e.returnValue = console.log(e);
-    }
+if(window && window.document) {
+    document.addEventListener('DOMContentLoaded', () => {
+        if(fin.me.isView) {
+            fin.me.updateOptions({customData: document.cookie.split(' ')})
+        }
+    })
 }       

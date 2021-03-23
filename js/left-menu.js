@@ -40,6 +40,7 @@ class LeftMenu extends HTMLElement {
                 url: "https://mail.google.com/",
                 printName: "view-close-test",
                 processAffinity: 'af_1',
+                preloadScripts: [{url: "http://localhost:5555/view-unload.js"}]
             }
          
         ];

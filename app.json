@@ -39,13 +39,15 @@
             "experimental": {
                 "analytics": true,
                 "showBackgroundImages": false
-            }
+            },
+            "webSecurity": false
         },
         "defaultViewOptions": {
             "experimental": {
                 "childWindows": true,
                 "analytics": true,
-                "showBackgroundImages": false
+                "showBackgroundImages": false,
+                "webSecurity": false
             }
         },
         "commands": [
