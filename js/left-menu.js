@@ -37,7 +37,7 @@ class LeftMenu extends HTMLElement {
                 processAffinity: 'ps_1',
             },
             {
-                url: `   https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox`,
+                url: "https://mail.google.com/",
                 printName: "view-close-test",
                 processAffinity: 'af_1',
             }
