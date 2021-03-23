@@ -9,7 +9,10 @@ const serverParams = {
     port: 5555,
     open: false,
     logLevel: 2,
-    cache: -1
+    cache: -1,
+    on: ("listening",(...args) => {
+        console.log(...args);
+    })
 };
 
 const appJson = 'app.json';

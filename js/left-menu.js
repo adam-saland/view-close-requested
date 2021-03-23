@@ -25,20 +25,23 @@ class LeftMenu extends HTMLElement {
                 url: 'https://www.tradingview.com/chart/?symbol=NASDAQ:AAPL',
                 printName: 'TradeView',
                 processAffinity: 'tv_1',
-                preloadScripts: [{url: location.href.replace('platform-window', 'view-unload.js')}]
             },
             {
                 url: 'https://www.google.com/search?q=INDEXDJX:+.DJI&stick=H4sIAAAAAAAAAONgecRozC3w8sc9YSmtSWtOXmNU4eIKzsgvd80rySypFBLjYoOyeKS4uDj0c_UNkgsry3kWsfJ5-rm4Rrh4RVgp6Ll4eQIAqJT5uUkAAAA&source=lnms&sa=X&ved=0ahUKEwii_NWT9fzoAhU3mHIEHWy3AWIQ_AUIDSgA&biw=1280&bih=1366&dpr=1',
                 printName: 'News',
                 processAffinity: 'mw_1',
-                preloadScripts: [{url: location.href.replace('platform-window', 'view-unload.js')}]
             },
             {
                 url: `https://cdn.openfin.co/docs/javascript/${fin.desktop.getVersion()}`,
                 printName: "Documentation",
                 processAffinity: 'ps_1',
-                preloadScripts: [{url: location.href.replace('platform-window', 'view-unload.js')}]
+            },
+            {
+                url: `   https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox`,
+                printName: "view-close-test",
+                processAffinity: 'af_1',
             }
+         
         ];
 
         this.snapshotForm = document.querySelector('snapshot-form');
