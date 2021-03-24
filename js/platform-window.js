@@ -2,7 +2,14 @@ export const CONTAINER_ID = 'layout-container';
 window.addEventListener('DOMContentLoaded', () => {
     // Before .50 AI version this may throw...
     fin.Platform.Layout.init({ containerId: CONTAINER_ID });
+    fin.me.on('tab-created', (e) => { console.log(e)})
+    
     const layoutDiv = document.querySelector(`#${CONTAINER_ID}`);
+
+    layoutDiv.addEventListener('tab-created', (e) => {
+        console.dir({ tabCreated: e }, { depth: null, colors: true })
+    })
+
     layoutDiv.addEventListener('click', async (e) => {
         e.preventDefault()
         if (fin.me.isWindow) {
@@ -10,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
             const views = new Set(await fin.me.getCurrentViews());
             console.dir({ VIEWS: views }, { depth: null, colors: true })
             console.dir({ TARGET: e.target }, { depth: null, colors: true })
-            const clickedView = [...views].find((v) => (parentElement.id.includes && e.target.className === "lm_close_tab"))
+            const clickedView = [...views].find((v) => (parentElement.id.includes(v.identity.name) && e.target.className === "lm_close_tab"))
             if(clickedView) {
                 const payload = (await clickedView.getOptions()).customData
                 e.stopPropagation()
@@ -21,6 +28,6 @@ window.addEventListener('DOMContentLoaded', () => {
             };
             console.dir({ CLICKED_VIEW: clickedView }, { depth: null, colors: true })
         }
-
     })
+    
 });
