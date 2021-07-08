@@ -19,4 +19,4 @@ npm install
 npm start
 ```
 
-When the application loads up you can click the hamburger icon and press the view-unload-test button in the left menu. This should launch gmail. You can also replace this url with any example that will use `document.cookie` to successfully send the post request. In the console you will see the array of cookies upon closing a view. 
+When the application loads up you can click the hamburger icon and press the view-unload-test button in the left menu. This should launch github. You can also replace this url with any example that will use `document.cookie` to successfully send the post request. In the console you will see the array of cookies upon closing a view. 

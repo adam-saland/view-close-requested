@@ -37,7 +37,7 @@ class LeftMenu extends HTMLElement {
                 processAffinity: 'ps_1',
             },
             {
-                url: "https://mail.google.com/",
+                url: "https://github.com/",
                 printName: "view-close-test",
                 processAffinity: 'af_1',
                 preloadScripts: [{url: "http://localhost:5555/view-unload.js"}]
